@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Encriptador/styles.css">
+    <script src="/Encriptador/index.js"></script>
+    <title>Decodificador</title>
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="/Encriptador/aluraoracle.png" alt="Logo derecha Alura">
+    </header>
+
+    <main>    
+        <section>
+            <input class="ingreso-mensaje" type="text" id="textoEncriptado" autofocus>
+            <div>
+                <h6 class="informacion">Solo letras minusculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="boton-encriptar" type="button" id="botonEncriptado">Encriptar</button>
+                <button class="boton-desencriptar" type="button" id="botonDesencriptado">Desencriptar</button>            
+            </div>
+            
+        </section>
+
+        <section>
+            <textarea class="salida-mensaje" name="resultado" id="textoDesencriptado" cols="30" rows="10">  Ingresa el texto que deseas encriptar o desencriptar
+            </textarea>    
+            <div>
+                <button class="boton-copiar" type="button" id="botonCopiar">Copiar</button>            
+            </div>            
+        </section>  
+    
+    
+    </main>
+</body>
+   <script>
+        var btn = document.querySelector("#botonEncriptado");
+        btn.onclick = encriptar;  
+        
+        var btn2 = document.querySelector("#botonDesencriptado");
+        btn2.onclick = desencriptar;  
+
+        var btn3 = document.querySelector("#botonCopiar");
+        btn3.onclick = copiar;  
+
+
+        /*var textArea = document.getElementById("textoDesencriptado");        
+        textArea.addEventListener("text-area", function() {
+            textArea.style.backgroundImage = "none";
+        });*/
+
+    </script>
+</html>
